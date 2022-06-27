@@ -177,12 +177,9 @@
   color: var(--mainText);
 }
 
-.form-box .form .btn {
+.form-box .form .btn1 {
   width: fit-content;
   margin: 20px auto;
-}
-
-.form-box .form .btn input {
   color: var(--secondaryText);
   background-color: var(--mainText);
   border: none;
@@ -200,7 +197,7 @@
   -o-transition: .3s;
 }
 
-.form-box .form .btn input:hover {
+.form-box .form .btn1:hover {
   background-color: var(--secondaryText);
   color: var(--mainText);
 }
@@ -239,7 +236,7 @@
     font-size: 10pt;
   }
 
-  .form-box .form .btn input {
+  .form-box .form .btn1 {
     font-size: 10pt;
     width: 70px;
 
@@ -249,7 +246,7 @@
 
 @media screen and (max-width:520px) {
   .auth-box {
-    width:300px;
+    width:400px;
     
   }
 
@@ -280,7 +277,7 @@
     font-size: 7pt;
   }
 
-  .form-box .form .btn input {
+  .form-box .form .btn1 {
     font-size: 10pt;
     width: 70px;
     

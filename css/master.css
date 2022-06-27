@@ -261,6 +261,7 @@ a {
   position: relative;
   background-image: url("../images/05.jpg");
   background-size: cover;
+  background-position: center;
   animation: fade 1s;
   -webkit-animation: fade 1.5s;
 }
@@ -414,6 +415,7 @@ a {
 
 .landing-page .intro-text {
   position: absolute;
+  text-align: center;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -435,6 +437,17 @@ a {
   color: var(--mainText);
   line-height: 1.5;
   font-weight: bold;
+}
+
+@media screen and (max-width:450px) {
+  .landing-page .intro-text h1 {
+    font-size: 25px;
+  }
+
+  .landing-page .intro-text p {
+    font-size: 10px;
+  }
+  
 }
 
 /* about */
