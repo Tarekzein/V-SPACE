@@ -212,7 +212,7 @@ input {
 
 .special-heading {
   color: var(--secondaryText);
-  font-size: 100pt;
+  font-size: 50pt;
   padding-left: 30px;
   background-color: var(--mainText);
 }
@@ -220,7 +220,7 @@ input {
 @media screen and (max-width: 780px) {
   
   .special-heading {
-    font-size: 80pt;
+    font-size: 30pt;
   }
 
 }
@@ -228,7 +228,7 @@ input {
 @media screen and (max-width: 660px) {
   
   .special-heading {
-    font-size: 50pt;
+    font-size: 20pt;
   }
 
 }

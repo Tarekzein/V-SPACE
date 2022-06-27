@@ -1,3 +1,22 @@
+// menu icon change
+
+let menuIcon = document.querySelector(".menu-icon");
+
+menuIcon.addEventListener("click", () => {
+  menuIcon.classList.toggle("change");
+  let menuVertical = document.querySelector(".vertical-menu");
+  if (menuIcon.classList.contains("change")) {
+    menuVertical.style.right = "0";
+    menuIcon.style.position = "fixed";
+  }
+  else {
+    menuVertical.style.right = "-250px";
+    menuIcon.style.position = "absolute";
+  }
+});
+
+
+
 // page loading animation
 
 let pageContainer = document.querySelector(".parent");
@@ -21,6 +40,10 @@ document.querySelector(".gear-icon ").addEventListener("click", ()=>{
 );
 
 
+
+
+
+
 // change colors code
 let colorsli = document.querySelectorAll(".color-list li");
 
@@ -28,42 +51,6 @@ let colorStorage = localStorage.getItem("color");
 
 const rocketColors = ["rocket color1.svg", "rocket color2.svg", "rocket color3.svg", "rocket color4.svg"];
 
-
-if (colorStorage !== null) {
-  document.documentElement.style.setProperty("--secondaryText", colorStorage);
-
-  if (colorStorage === "#fd7014") {
-    let img = document.querySelector(".about-box img");
-    img.setAttribute("src", `images/${rocketColors[0]}`);
-  }
-  else if (colorStorage === "#145efd") {
-    let img = document.querySelector(".about-box img");
-    img.setAttribute("src", `images/${rocketColors[1]}`);
-  }
-  else if (colorStorage === "#14fd27") {
-    let img = document.querySelector(".about-box img");
-    img.setAttribute("src", `images/${rocketColors[2]}`);
-  }
-  else if (colorStorage === "#fdf914") {
-    let img = document.querySelector(".about-box img");
-    img.setAttribute("src", `images/${rocketColors[3]}`);
-  }
-
-
-
-  document.querySelectorAll(".color-list li").forEach(elm => {
-    
-    // remove active class from li element
-    elm.classList.remove("active");
-
-    // add the active class to li element of choosen color
-    if (elm.dataset.color === colorStorage) {
-      elm.classList.add("active");
-    }
-
-  });
-
-}
 
 colorsli.forEach(li => {
   
@@ -75,6 +62,11 @@ colorsli.forEach(li => {
     document.documentElement.style.setProperty("--secondaryText", color);
     // set the choseen color to the local storage
     localStorage.setItem("color", color);
+
+    let currentActv = document.querySelector(".active");
+    currentActv.classList.remove("active");
+    e.target.classList.toggle("active");
+
 
     if (color === "#fd7014") {
       let img = document.querySelector(".about-box img");
@@ -93,34 +85,52 @@ colorsli.forEach(li => {
       img.setAttribute("src", `images/${rocketColors[3]}`);
     }
 
-    let currentActv = document.querySelector(".active");
-    
-    currentActv.classList.remove("active");
-    
-    e.target.classList.toggle("active");
 
   });
   
 });
 
+
+if (colorStorage !== null) {
+  document.documentElement.style.setProperty("--secondaryText", colorStorage);
+
+  document.querySelectorAll(".color-list li").forEach(elm => {
+    
+    // remove active class from li element
+    elm.classList.remove("active");
+
+    // add the active class to li element of choosen color
+    if (elm.dataset.color === colorStorage) {
+      elm.classList.add("active");
+    }
+
+  });
+
+
+  if (colorStorage === "#fd7014") {
+    let img = document.querySelector(".about-box img");
+    img.setAttribute("src", `images/${rocketColors[0]}`);
+  }
+  else if (colorStorage === "#145efd") {
+    let img = document.querySelector(".about-box img");
+    img.setAttribute("src", `images/${rocketColors[1]}`);
+  }
+  else if (colorStorage === "#14fd27") {
+    let img = document.querySelector(".about-box img");
+    img.setAttribute("src", `images/${rocketColors[2]}`);
+  }
+  else if (colorStorage === "#fdf914") {
+    let img = document.querySelector(".about-box img");
+    img.setAttribute("src", `images/${rocketColors[3]}`);
+  }
+
+}
+
+
+
 // landing page code
 
-// menu icon change
 
-let menuIcon = document.querySelector(".menu-icon");
-
-menuIcon.addEventListener("click", () => {
-  menuIcon.classList.toggle("change");
-  let menuVertical = document.querySelector(".vertical-menu");
-  if (menuIcon.classList.contains("change")) {
-    menuVertical.style.right = "0";
-    menuIcon.style.position = "fixed";
-  }
-  else {
-    menuVertical.style.right = "-250px";
-    menuIcon.style.position = "absolute";
-  }
-});
 
 // change the background automaticaly
 setInterval(() => {
