@@ -259,7 +259,7 @@ a {
 .landing-page {
   height: 100vh;
   position: relative;
-  background-image: url("/images/05.jpg");
+  background-image: url("../images/05.jpg");
   background-size: cover;
   animation: fade 1s;
   -webkit-animation: fade 1.5s;

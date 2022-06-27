@@ -139,7 +139,7 @@ setInterval(() => {
   let ranIndex = Math.floor(Math.random() * imgArr.length);
   let landPage = document.querySelector(".landing-page");
   // landPage.style.backgroundImage = "url('/images/03.jpg')";
-  landPage.style.backgroundImage = `url("/images/${imgArr[ranIndex]}")`;
+  landPage.style.backgroundImage = `url("../images/${imgArr[ranIndex]}")`;
 
   
 }, 5000);
