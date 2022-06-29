@@ -160,9 +160,44 @@ else {
   }
 }
 
+function sectionsHeadingAnimation() {
+
+  let aboutHeading = document.querySelector(".about-section .special-heading");
+  let servicesHeading = document.querySelector(".services .special-heading");
+  let footerHeading = document.querySelector(".footer .special-heading");
+
+  let aboutHeadingOffsetTop = aboutHeading.offsetTop;
+  let aboutHeadingOffsetHeight = aboutHeading.offsetHeight;
+  
+  let servicesHeadingOffsetTop = servicesHeading.offsetTop;
+  let servicesHeadingOffsetHeight = servicesHeading.offsetHeight;
+  
+  let footerHeadingOffsetTop = footerHeading.offsetTop;
+  let footerHeadingOffsetHeight = footerHeading.offsetHeight;
+
+  let windowHeight = this.innerHeight;
+
+  let windowScrollTop = this.pageYOffset;
+
+  if (windowScrollTop >= (aboutHeadingOffsetTop + aboutHeadingOffsetHeight) - windowHeight) {
+    aboutHeading.classList.add("animate");
+  }
+  if (windowScrollTop >= (servicesHeadingOffsetTop + servicesHeadingOffsetHeight) - windowHeight) {
+    servicesHeading.classList.add("animate");
+  }
+  if (windowScrollTop >= (footerHeadingOffsetTop + footerHeadingOffsetHeight) - windowHeight) {
+    footerHeading.classList.add("animate");
+  }
+
+
+}
+
 // pageBtnStat();
 
-window.onscroll = () => {pageBtnStat();}
+window.onscroll = () => {
+  pageBtnStat();
+  sectionsHeadingAnimation();
+}
 
 pageBtn.addEventListener("click", () => {
   
@@ -170,5 +205,4 @@ pageBtn.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 
 });
-
 

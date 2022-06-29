@@ -53,7 +53,7 @@
 .auth-box {
   background-color: var(--mainColor);
   width: 1000px;
-  height: 500px;
+  min-height: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
@@ -64,13 +64,17 @@
 
 .auth-box .img-box {
   width: 40% ;
-  height: 100%;
+  
   background-image: url("../images/03.jpg");
   background-size: cover;
   background-position: center;
   display: inline-block;
   position: relative;
   padding: 15px;
+}
+
+.auth-box #register {
+  background-image: url("../images/02.jpg");
 }
 
 .auth-box .img-box .intro-mess {
@@ -159,9 +163,10 @@
   -o-transition: .3s;
 }
 
-.form-box .form .box input:focus ~ label {
+.form-box .form .box input:focus ~ label,.form-box .form .box input:not(:placeholder-shown) ~ label {
   opacity: 1;
   color: var(--secondaryText);
+  font-size: 12px;
 }
 
 .form-box .form .reg-link a {
@@ -205,7 +210,7 @@
 @media screen and (max-width:1015px) {
   .auth-box {
     width:700px;
-    height: 400px;
+    min-height: 400px;
   }
 }
 

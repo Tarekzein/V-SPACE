@@ -78,16 +78,8 @@
       </div>
 
       <div class="auth-box flex">
-        <div class="img-box">
-          <div class="overlay"></div>
-          <div class="intro-mess flex">
-            <h2>Welcome new Astronaut</h2>
-            <a href="register.html" class="btn btn1">SignUp</a>
-          </div>
-        </div>
-
         <div class="form-box">
-          <h1 class="title">Login</h1>
+          <h1 class="title">Register</h1>
           <form action="" method="POST" class="form">
             <div class="box">
               <input
@@ -98,6 +90,12 @@
               />
               <label for="username">Username</label>
             </div>
+
+            <div class="box">
+              <input type="text" placeholder=" " id="email" name="email" />
+              <label for="email">Email</label>
+            </div>
+
             <div class="box">
               <input
                 type="password"
@@ -105,14 +103,33 @@
                 id="pass"
                 name="password"
               />
-              <label for="pass">password</label>
+              <label for="pass">Password</label>
             </div>
+
+            <div class="box">
+              <input
+                type="password"
+                placeholder=" "
+                id="pass2"
+                name="password2"
+              />
+              <label for="pass2">Confirm Password</label>
+            </div>
+
             <div class="reg-link">
               <h4><a href="#">Forget Password ?</a></h4>
             </div>
 
             <input class="btn btn1" type="submit" value="SignIn" />
           </form>
+        </div>
+
+        <div class="img-box" id="register">
+          <div class="overlay"></div>
+          <div class="intro-mess flex">
+            <h2>Welcome Back Astronaut</h2>
+            <a href="login.html" class="btn btn1">Login</a>
+          </div>
         </div>
       </div>
     </div>
